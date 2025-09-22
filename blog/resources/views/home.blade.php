@@ -114,8 +114,8 @@
       </nav>
 
       <div class="cta">
-        <a href="/login" class="btn ghost">Login</a>
-        <a href="/register" class="btn primary">Buat Website</a>
+        <a href="{{ route('login') }}" class="btn ghost">Login</a>
+        <a href="{{ route('register') }}" class="btn primary">Buat Website</a>
       </div>
   </header>
 
