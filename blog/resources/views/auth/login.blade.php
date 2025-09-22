@@ -81,6 +81,11 @@
 <body>
 
   <div class="login-box">
+     @if(session('success'))
+      <div style="background:#d1fae5; color:#065f46; padding:12px; border-radius:8px; margin-bottom:16px; text-align:center; font-weight:600;">
+          {{ session('success') }}
+      </div>
+    @endif
     <h2>Login ke BLOG</h2>
     <form method="POST" action="{{ route('login') }}">
       @csrf

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login BLOG</title>
+  <title>Register BLOG</title>
   @vite('resources/css/app.css') 
   <style>
     body {
@@ -15,36 +15,38 @@
       min-height: 100vh;
       margin: 0;
     }
-    .login-box {
+    .form-box {
       background: #fff;
       padding: 40px;
       border-radius: 16px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.08);
       width: 100%;
-      max-width: 400px;
+      max-width: 420px;
     }
-    .login-box h2 {
+    .form-box h2 {
       font-size: 28px;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
       text-align: center;
       color: #111827;
     }
-    .login-box label {
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
       display: block;
       margin-bottom: 6px;
       font-size: 14px;
       font-weight: 600;
       color: #374151;
     }
-    .login-box input {
+    .form-group input {
       width: 100%;
       padding: 12px 14px;
       border: 1px solid #d1d5db;
       border-radius: 8px;
-      margin-bottom: 16px;
       font-size: 14px;
     }
-    .login-box input:focus {
+    .form-group input:focus {
       border-color: #2563eb;
       outline: none;
       box-shadow: 0 0 0 2px #bfdbfe;
@@ -66,12 +68,12 @@
     .btn-primary:hover {
       background: #1d4ed8;
     }
-    .login-footer {
+    .form-footer {
       margin-top: 20px;
       font-size: 14px;
       text-align: center;
     }
-    .login-footer a {
+    .form-footer a {
       color: #2563eb;
       text-decoration: none;
       font-weight: 500;
@@ -80,19 +82,42 @@
 </head>
 <body>
 
-  <div class="register-box">
-    <h2>Login ke BLOG</h2>
+  <div class="form-box">
+    <h2>Daftar Akun BLOG</h2>
     <form method="POST" action="{{ route('register') }}">
       @csrf
 
-      <label for="email">Email</label>
-      <input type="email" name="email" id="email" placeholder="Masukkan email" required>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" placeholder="Masukkan username" required>
+      </div>
 
-      <label for="password">Password</label>
-      <input type="password" name="password" id="password" placeholder="Masukkan password" required>
+      <div class="form-group">
+        <label for="no_telp">No. Telp</label>
+        <input type="tel" name="no_telp" id="no_telp" placeholder="Masukkan no telp" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Masukkan email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Masukkan password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password_confirmation">Konfirmasi Password</label>
+        <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Ulangi password" required>
+      </div>
 
       <button type="submit" class="btn btn-primary">Register</button>
     </form>
+
+    <div class="form-footer">
+      <p>Sudah punya akun? <a href="{{ route('login') }}">Login di sini</a></p>
+    </div>
   </div>
 
 </body>
