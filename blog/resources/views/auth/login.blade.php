@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login BLOG</title>
+  <title>Login BLOK-K</title>
   @vite('resources/css/app.css') 
   <style>
     body {
@@ -41,7 +41,7 @@
       padding: 12px 14px;
       border: 1px solid #d1d5db;
       border-radius: 8px;
-      margin-bottom: 16px;
+      margin-bottom: 8px;
       font-size: 14px;
     }
     .login-box input:focus {
@@ -58,6 +58,7 @@
       font-weight: 600;
       cursor: pointer;
       transition: background 0.2s;
+      margin-top: 8px;
     }
     .btn-primary {
       background: #2563eb;
@@ -76,25 +77,59 @@
       text-decoration: none;
       font-weight: 500;
     }
+    .alert-success {
+      background:#d1fae5;
+      color:#065f46;
+      padding:12px;
+      border-radius:8px;
+      margin-bottom:16px;
+      text-align:center;
+      font-weight:600;
+    }
+    .alert-error {
+      background:#fee2e2;
+      color:#991b1b;
+      padding:12px;
+      border-radius:8px;
+      margin-bottom:16px;
+      text-align:center;
+      font-weight:600;
+    }
+    .field-error {
+      color:#dc2626;
+      font-size:13px;
+      margin-bottom:10px;
+    }
   </style>
 </head>
 <body>
 
   <div class="login-box">
-     @if(session('success'))
-      <div style="background:#d1fae5; color:#065f46; padding:12px; border-radius:8px; margin-bottom:16px; text-align:center; font-weight:600;">
+    @if(session('success'))
+      <div class="alert-success">
           {{ session('success') }}
       </div>
     @endif
+
+    @if ($errors->any())
+      <div class="alert-error">
+          {{ $errors->first() }}
+      </div>
+    @endif
+
     <h2>Login ke BLOG</h2>
     <form method="POST" action="{{ route('login') }}">
       @csrf
 
       <label for="email">Email</label>
-      <input type="email" name="email" id="email" placeholder="Masukkan email" required>
+      <input type="email" name="email" id="email" placeholder="Masukkan email" required value="{{ old('email') }}">
+     
 
       <label for="password">Password</label>
       <input type="password" name="password" id="password" placeholder="Masukkan password" required>
+      @error('password')
+        <div class="field-error">{{ $message }}</div>
+      @enderror
 
       <button type="submit" class="btn btn-primary">Login</button>
     </form>
