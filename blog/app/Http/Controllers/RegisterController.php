@@ -22,6 +22,10 @@ class RegisterController extends Controller
             'no_telp'  => 'required|string|max:15',
             'email'    => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+        ], [
+            'password.confirmed' => 'Password dan konfirmasi password tidak cocok!',
+            'password.min'       => 'Password minimal 6 karakter.',
+            'email.unique'       => 'Email sudah digunakan.',
         ]);
 
         User::create([

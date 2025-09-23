@@ -84,36 +84,49 @@
 
   <div class="form-box">
     <h2>Daftar Akun BLOG</h2>
-    <form method="POST" action="{{ route('register') }}">
-      @csrf
+   <form method="POST" action="{{ route('register.post') }}">
+    @csrf
 
-      <div class="form-group">
+    <div class="form-group">
         <label for="username">Username</label>
-        <input type="text" name="username" id="username" placeholder="Masukkan username" required>
-      </div>
+        <input type="text" name="username" id="username" placeholder="Masukkan username" value="{{ old('username') }}" required>
+        @error('username')
+            <span style="color:red;font-size:13px">{{ $message }}</span>
+        @enderror
+    </div>
 
-      <div class="form-group">
+    <div class="form-group">
         <label for="no_telp">No. Telp</label>
-        <input type="tel" name="no_telp" id="no_telp" placeholder="Masukkan no telp" required>
-      </div>
+        <input type="tel" name="no_telp" id="no_telp" placeholder="Masukkan no telp" value="{{ old('no_telp') }}" required>
+        @error('no_telp')
+            <span style="color:red;font-size:13px">{{ $message }}</span>
+        @enderror
+    </div>
 
-      <div class="form-group">
+    <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" name="email" id="email" placeholder="Masukkan email" required>
-      </div>
+        <input type="email" name="email" id="email" placeholder="Masukkan email" value="{{ old('email') }}" required>
+        @error('email')
+            <span style="color:red;font-size:13px">{{ $message }}</span>
+        @enderror
+    </div>
 
-      <div class="form-group">
+    <div class="form-group">
         <label for="password">Password</label>
         <input type="password" name="password" id="password" placeholder="Masukkan password" required>
-      </div>
+        @error('password')
+            <span style="color:red;font-size:13px">{{ $message }}</span>
+        @enderror
+    </div>
 
-      <div class="form-group">
+    <div class="form-group">
         <label for="password_confirmation">Konfirmasi Password</label>
         <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Ulangi password" required>
-      </div>
+    </div>
 
-      <button type="submit" class="btn btn-primary">Register</button>
-    </form>
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>
+
 
     <div class="form-footer">
       <p>Sudah punya akun? <a href="{{ route('login') }}">Login di sini</a></p>
