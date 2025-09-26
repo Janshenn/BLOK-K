@@ -20,9 +20,15 @@ use App\Http\Controllers\RegisterController;
 // Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Halaman home
+// Halaman utama
 Route::get('/', function () {
     return view('home');
 })->name('home');
+
+// Halaman About
+Route::get('/About', function () {
+    return view('About'); 
+})->name('About');
 
 // Register
 Route::get('/register', [RegisterController::class, 'showRegister'])->name('register');
