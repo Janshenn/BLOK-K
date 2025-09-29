@@ -30,6 +30,11 @@ Route::get('/About', function () {
     return view('About'); 
 })->name('About');
 
+// Halaman Kontak
+Route::get('/Kontak', function () {
+    return view('Kontak'); 
+})->name('Kontak');
+
 // Register
 Route::get('/register', [RegisterController::class, 'showRegister'])->name('register');
 Route::post('/register', [RegisterController::class, 'register'])->name('register.post');

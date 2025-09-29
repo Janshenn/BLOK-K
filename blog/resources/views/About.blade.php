@@ -18,7 +18,8 @@
       <nav class="site-menu" role="navigation" aria-label="Main navigation">
         <a href="{{ route('home') }}">Home</a>
         <a href="{{ route('About') }}" class="active">About</a>
-        <a href="#contact">Kontak</a>
+        <a href="{{ route('Kontak') }}" class="active">Kontak</a>
+        
       </nav>
       <div class="cta">
         @guest
@@ -48,7 +49,31 @@
 
     <!-- TEKS -->
     <div class="about-text">
-      <h2>Tentang Saya</h2>
+      <h2>M.Budiman Rocky S</h2>
+      <h4>BackEnd Programming</h4>
+      <p>
+        Saya seorang developer yang suka membuat UI/UX yang bersih dan modern,
+        dengan fokus pada performa dan pengalaman pengguna.
+      </p>
+      <a href="#" class="btn-primary">Hubungi Saya</a>
+    </div>
+  </div>
+</section>
+
+<section class="about-section">
+  <div class="about-container">
+    <!-- FOTO CAROUSEL -->
+    <div class="about-photo-carousel">
+      <div class="slides">
+        <img src="./images/rocky.jpg" alt="Foto 1">
+        <img src="foto2.jpg" alt="Foto 2">
+        <img src="foto3.jpg" alt="Foto 3">
+      </div>
+    </div>
+
+    <!-- TEKS -->
+    <div class="about-text">
+      <h2>Janshen</h2>
       <h4>Frontend Developer</h4>
       <p>
         Saya seorang developer yang suka membuat UI/UX yang bersih dan modern,

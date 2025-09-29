@@ -23,7 +23,7 @@
         <nav class="site-menu" role="navigation" aria-label="Main navigation">
           <a href="#">Home</a>
           <a href="{{ route('About') }}">About</a>
-          <a href="#contact">Kontak</a>
+          <a href="{{ route('Kontak') }}" class="active">Kontak</a>
         </nav>
         <div class="cta">
           @guest
@@ -186,9 +186,7 @@
           <h3>Tautan Cepat</h3>
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#about">Tentang Kami</a></li>
-            <li><a href="#posts">Artikel</a></li>
-            <li><a href="#team">Penulis</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#contact">Kontak</a></li>
           </ul>
         </div>
@@ -208,7 +206,7 @@
         <div class="footer-section">
           <h3>Kontak</h3>
           <div style="color: #d1d5db; font-size: 14px; line-height: 1.8;">
-            <p style="margin-bottom: 8px;">Email: info@blok-k.com</p>
+            <p style="margin-bottom: 8px;">Email: blok-k@gmail.com</p>
             <p style="margin-bottom: 8px;">Telepon: (021) 1234-5678</p>
             <p style="margin-bottom: 8px;">Alamat: Jl. Teknologi No. 123, Jakarta</p>
           </div>

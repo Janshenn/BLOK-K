@@ -17,7 +17,7 @@
 body {
     margin: 0;
     background: var(--bg);
-    color: #0f172a;
+    color: #121213;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -350,6 +350,7 @@ nav.site-menu a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #b0b5bb;
 }
 
 /* CTA STRIP */
