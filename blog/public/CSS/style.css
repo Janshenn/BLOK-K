@@ -350,7 +350,7 @@ nav.site-menu a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #b0b5bb;
+
 }
 
 /* CTA STRIP */
@@ -484,3 +484,154 @@ footer {
         text-align: center;
     }
 }
+
+/* KONTAK */
+.contact-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f0f4f7, #e2e8f0);
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  max-width: 900px;
+  width: 100%;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.contact-container:hover {
+  transform: translateY(-5px);
+}
+
+.contact-container h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #1a202c;
+  font-weight: 700;
+}
+
+.contact-container p {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #4a5568;
+  font-size: 15px;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form .form-group.full {
+  grid-column: 1 / 3;
+}
+
+.contact-form label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e0;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s;
+  background: #f9fafb;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #38a169;
+  background: #ffffff;
+  box-shadow: 0 0 8px rgba(56, 161, 105, 0.3);
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.btn-submit {
+  grid-column: 1 / 3;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: #38a169;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-submit:hover {
+  background: #2f855a;
+  transform: scale(1.02);
+}
+
+.whatsapp-btn {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.whatsapp-btn a {
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  padding: 14px 22px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.whatsapp-btn a:hover {
+  background: #1ebc57;
+  transform: scale(1.05);
+}
+
+.social-media {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.social-media p {
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.social-media a img {
+  width: 40px;
+  margin: 0 12px;
+  transition: transform 0.3s, filter 0.3s;
+  filter: grayscale(80%);
+}
+
+.social-media a img:hover {
+  transform: scale(1.2);
+  filter: grayscale(0%);
+}
+
+.maps {
+  margin-top: 25px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
