@@ -55,7 +55,7 @@
         <div class="hero-illustration carousel">
           <div class="slides">
             <img src="images/logo.png" alt="Template 1">
-            <img src="https://via.placeholder.com/400x200/06b6d4/ffffff?text=Template+2" alt="Template 2">
+            <img src="images/rocky.jpg" alt="Template 2">
             <img src="https://via.placeholder.com/400x200/10b981/ffffff?text=Template+3" alt="Template 3">
             <img src="https://via.placeholder.com/400x200/10b981/ffffff?text=Template+3" alt="Template 4">
           </div>

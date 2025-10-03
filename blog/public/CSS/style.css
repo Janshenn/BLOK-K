@@ -127,17 +127,25 @@ nav.site-menu a {
     font-size: 13px;
 }
 
-.hero h1 {
-    font-size: 40px;
-    line-height: 1.03;
-    margin: 14px 0 12px;
+.hero {
+    display: flex;
+    align-items: flex-start;  /* supaya vertikal sejajar tengah */
+    justify-content: space-between; /* kasih jarak antar teks & card */
+    gap: 40px; /* jarak antara teks dan card */
 }
 
-.hero p.lead {
-    color: var(--muted);
-    font-size: 16px;
-    margin: 0 0 22px;
+/* biar teksnya tidak terlalu melebar */
+.hero > div {
+    flex: 1;
+    max-width: 50%;
 }
+
+/* biar card/illustrasi juga fleksibel */
+.hero-card {
+    flex: 1;
+    max-width: 400px; /* sesuaikan ukuran kotak card */
+}
+
 
 .hero .actions {
     display: flex;
@@ -145,26 +153,24 @@ nav.site-menu a {
     flex-wrap: wrap;
 }
 
-.hero-card {
-    background: linear-gradient(
-        180deg,
-        rgba(6, 182, 212, 0.06),
-        rgba(11, 92, 255, 0.03)
-    );
-    border-radius: 14px;
-    padding: 18px;
-    box-shadow: var(--card-shadow);
-    height: 100%;
-}
-
 .hero-illustration {
-    height: 260px;
+    width: 400px;   /* fix lebar */
+    height: 400px;  /* fix tinggi */
     border-radius: 10px;
     background: linear-gradient(135deg, #eef2ff, #e6fffa);
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden; /* biar gambar nggak keluar box */
 }
+
+.hero-illustration img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* gambar utuh, tidak gepeng */
+    border-radius: block;
+}
+
 .carousel {
     position: relative;
     overflow: hidden;
@@ -181,10 +187,11 @@ nav.site-menu a {
 }
 
 .carousel img {
-    width: 100%; /* lebar penuh per "slot" */
-    height: 200px;
-    object-fit: cover;
-    flex: 0 0 100%; /* setiap gambar ambil 100% container */
+    width: 100%;
+    height: auto;       /* tinggi ikut rasio asli gambar */
+    object-fit: contain; /* gambar utuh, meski ada ruang kosong */
+    flex: 0 0 100%;
+    display: block;
 }
 /* FEATURES */
 .features {
