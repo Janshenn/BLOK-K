@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ProfilController;
 
 // // Halaman home
 // Route::get('/', function () {
@@ -43,3 +44,9 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('/login', [AuthController::class, 'login'])->name('login.post');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+// Profil Controller
+Route::get('/profil/rocky', [ProfilController::class, 'rocky'])->name('profil.rocky');
+Route::get('/profil/janshen', [ProfilController::class, 'janshen'])->name('profil.janshen');
+Route::get('/profil/dennis', [ProfilController::class, 'dennis'])->name('profil.dennis');
+Route::get('/profil/isro', [ProfilController::class, 'isro'])->name('profil.isro');

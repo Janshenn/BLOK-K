@@ -36,122 +36,44 @@
     </div>
   </header>
 
-<section class="about-untar" aria-labelledby="untar-title">
-    <div class="about-text"> 
-        <h1 id="untar-title">Kami adalah mahasiswa Universitas Tarumanagara (UNTAR) yang aktif dalam kegiatan akademik maupun organisasi. </h1>
-        <p>Melalui berbagai program dan aktivitas, kami berusaha membangun portofolio, memperluas jaringan, serta mengembangkan keterampilan profesional. </p>
+        <!-- Konten Profil -->
+    <div class="profil-rocky">
+        <!-- Foto -->
+        <div class="profile-img">
+            <img src="{{ asset('images/rocky.jpg') }}" alt="Foto Rocky">
+        </div>
+
+        <!-- Info -->
+        <div class="profile-info">
+            <h1>Janshen</h1>
+            <h3>Back-End Programmer | System Architect</h3>
+
+            <p>
+                Saya adalah seorang <strong>Back-End Programmer</strong> dengan fokus pada pengembangan
+                sistem web dan API. Berpengalaman membangun aplikasi yang scalable, aman, dan mudah dipelihara.
+            </p>
+
+            <h4>Keahlian</h4>
+            <ul>
+                <li>Laravel, Node.js, Express</li>
+                <li>MySQL, PostgreSQL, MongoDB</li>
+                <li>REST API Development</li>
+                <li>Git & Deployment (Linux, Docker, VPS)</li>
+            </ul>
+
+            <h4>Pengalaman</h4>
+            <ul>
+                <li>Membangun sistem manajemen data perusahaan</li>
+                <li>Mengembangkan API untuk aplikasi mobile</li>
+                <li>Optimasi database & query</li>
+            </ul>
+
+            <h4>Kontak</h4>
+            <p>Email: <a href="mailto:rocky@example.com">rocky@example.com</a></p>
+            <p>GitHub: <a href="https://github.com/rocky" target="_blank">github.com/rocky</a></p>
+        </div>
     </div>
-    <div class="about-img">
-        <img src="{{ asset('images/untar-logo.png') }}" alt="Logo Untar">
-    </div>
-</section>
-
-  <section class="about-section">
-  <div class="about-container">
-    <!-- FOTO CAROUSEL -->
-    <div class="about-photo-carousel">
-      <div class="slides">
-        <img src="./images/rocky.jpg" alt="Foto 1">
-        <img src="foto2.jpg" alt="Foto 2">
-        <img src="foto3.jpg" alt="Foto 3">
-      </div>
-    </div>
-
-    <!-- TEKS -->
-   <div class="about-text">
-    <h2>M.Budiman Rocky S</h2>
-    <h4>BackEnd Programming</h4>
-    <p>
-      Saya seorang developer yang suka membuat UI/UX yang bersih dan modern,
-      dengan fokus pada performa dan pengalaman pengguna.
-    </p>
-    <a href="{{ route('profil.rocky') }}" class="btn-secondary">Lihat Selengkapnya</a>
-</section>     
-    </div>
-
-<section class="about-section">
-  <div class="about-container">
-    <!-- FOTO CAROUSEL -->
-    <div class="about-photo-carousel">
-      <div class="slides">
-        <img src="./images/janshen.jpg" alt="Foto 1">
-        <img src="foto2.jpg" alt="Foto 2">
-        <img src="foto3.jpg" alt="Foto 3">
-      </div>
-    </div>
-
-    <!-- TEKS -->
-   <div class="about-text">
-    <h2>Janshen</h2>
-    <h4>FrontEnd Programming</h4>
-    <p>
-      Saya seorang developer yang suka membuat UI/UX yang bersih dan modern,
-      dengan fokus pada performa dan pengalaman pengguna.
-    </p>
-    <a href="{{ route('profil.janshen') }}" class="btn-secondary">Lihat Selengkapnya</a>
-</section>     
-    </div>
-
-<section class="about-section">
-  <div class="about-container">
-    <!-- FOTO CAROUSEL -->
-    <div class="about-photo-carousel">
-      <div class="slides">
-        <img src="./images/rocky.jpg" alt="Foto 1">
-        <img src="foto2.jpg" alt="Foto 2">
-        <img src="foto3.jpg" alt="Foto 3">
-      </div>
-    </div>
-
-    <!-- TEKS -->
-   <div class="about-text">
-    <h2>Dennis Ananda</h2>
-    <h4>BackEnd Programming</h4>
-    <p>
-      Saya seorang developer yang suka membuat UI/UX yang bersih dan modern,
-      dengan fokus pada performa dan pengalaman pengguna.
-    </p>
-    <a href="{{ route('profil.dennis') }}" class="btn-secondary">Lihat Selengkapnya</a>
-</section>     
-    </div>
-
-<section class="about-section">
-  <div class="about-container">
-    <!-- FOTO CAROUSEL -->
-    <div class="about-photo-carousel">
-      <div class="slides">
-        <img src="./images/rocky.jpg" alt="Foto 1">
-        <img src="foto2.jpg" alt="Foto 2">
-        <img src="foto3.jpg" alt="Foto 3">
-      </div>
-    </div>
-
-    <!-- TEKS -->
-   <div class="about-text">
-    <h2>Isro Indra Septian</h2>
-    <h4>FrontEnd Programming</h4>
-    <p>
-      Saya seorang developer yang suka membuat UI/UX yang bersih dan modern,
-      dengan fokus pada performa dan pengalaman pengguna.
-    </p>
-    <a href="{{ route('profil.isro') }}" class="btn-secondary">Lihat Selengkapnya</a>
-</section>     
-    </div>
-
-<script>
-let index = 0;
-const slides = document.querySelector(".about-photo-carousel .slides");
-const totalSlides = slides.children.length;
-
-setInterval(() => {
-  index = (index + 1) % totalSlides;
-  slides.style.transform = `translateX(-${index * 100}%)`;
-}, 3000);
-</script>
-
-</body>
-</html>
-
+    
 <!-- FOOTER -->
     <footer role="contentinfo">
       <div class="footer-content">
@@ -218,3 +140,6 @@ setInterval(() => {
             </svg>
           </a>
     </footer>
+
+</body>
+</html>
