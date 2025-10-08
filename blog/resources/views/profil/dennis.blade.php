@@ -73,7 +73,11 @@
             <p>GitHub: <a href="https://github.com/rocky" target="_blank">github.com/rocky</a></p>
         </div>
     </div>
-    
+
+<div class="back-container">
+  <a href="{{ route('About') }}" class="btn-back">← Kembali ke About</a>
+</div>
+
 <!-- FOOTER -->
     <footer role="contentinfo">
       <div class="footer-content">

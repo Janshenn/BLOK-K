@@ -40,39 +40,43 @@
     <div class="profil-rocky">
         <!-- Foto -->
         <div class="profile-img">
-            <img src="{{ asset('images/rocky.jpg') }}" alt="Foto Rocky">
+            <img src="{{ asset('images/Janshen.jpg') }}" alt="Foto Rocky">
         </div>
 
         <!-- Info -->
         <div class="profile-info">
             <h1>Janshen</h1>
-            <h3>Back-End Programmer | System Architect</h3>
+            <h3>FrontEnd Developer</h3>
 
             <p>
-                Saya adalah seorang <strong>Back-End Programmer</strong> dengan fokus pada pengembangan
-                sistem web dan API. Berpengalaman membangun aplikasi yang scalable, aman, dan mudah dipelihara.
+                Saya seorang Pengembang <strong>FrontEnd Developer</strong>yang gemar menuangkan ide menjadi pengalaman digital yang menarik, fungsional, dan responsif. 
+                Saya memadukan kepekaan desain dengan kode yang bersih dan efisien untuk membangun antarmuka yang terasa mulus, intuitif, dan bermakna bagi pengguna. 
+                Tujuan saya adalah menciptakan produk yang tidak hanya terlihat bagus, tetapi juga berfungsi dengan sempurna di setiap layar.
             </p>
 
             <h4>Keahlian</h4>
             <ul>
-                <li>Laravel, Node.js, Express</li>
-                <li>MySQL, PostgreSQL, MongoDB</li>
-                <li>REST API Development</li>
-                <li>Git & Deployment (Linux, Docker, VPS)</li>
+                <li>HTML, CSS, Javascript</li>
+                <li>Figma</li>
             </ul>
 
             <h4>Pengalaman</h4>
             <ul>
-                <li>Membangun sistem manajemen data perusahaan</li>
-                <li>Mengembangkan API untuk aplikasi mobile</li>
-                <li>Optimasi database & query</li>
+                <li>Staff Kementrian Dalam Negri BEM UNTAR Tahun 2024/2025</li>
+                <li>Menjadi Koordinator cabang olahraga Bulu Tangkis dalam program kerja TSAC, BEM UNTAR</li>
+                <li>Membuat tampilan UI untuk website Yummy Taste, Love and Health, BLOK-K</li>
             </ul>
 
             <h4>Kontak</h4>
-            <p>Email: <a href="mailto:rocky@example.com">rocky@example.com</a></p>
-            <p>GitHub: <a href="https://github.com/rocky" target="_blank">github.com/rocky</a></p>
+            <p>Email: <a href="mailto:janshen.535230020@stu.untar.ac.id">janshen.535230020@stu.untar.ac.id</a></p>
+            <p>Linkedin: <a href="https://www.linkedin.com/in/janshenz" target="_blank">Janshen</a></p>
+            <p>GitHub: <a href="https://github.com/Janshenn" target="_blank">github.com/Janshen</a></p>
         </div>
     </div>
+
+<div class="back-container">
+  <a href="{{ route('About') }}" class="btn-back">← Kembali ke About</a>
+</div>
     
 <!-- FOOTER -->
     <footer role="contentinfo">

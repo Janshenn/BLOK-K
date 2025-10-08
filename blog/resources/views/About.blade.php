@@ -85,7 +85,7 @@
     <h2>Janshen</h2>
     <h4>FrontEnd Programming</h4>
     <p>
-      Saya seorang developer yang suka membuat UI/UX yang bersih dan modern,
+      Saya seorang Frontend Developer yang suka membuat UI/UX yang bersih,menarik dan modern,
       dengan fokus pada performa dan pengalaman pengguna.
     </p>
     <a href="{{ route('profil.janshen') }}" class="btn-secondary">Lihat Selengkapnya</a>

@@ -411,7 +411,41 @@ nav.site-menu a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start; /* <-- penting agar konten tidak stretch */
+}
 
+.about-text h4{
+    margin-bottom: 4px;
+}
+.about-text p{
+    margin-top: 0;
+}
+
+.btn-secondary {
+  display: inline-block;         
+  background-color: #0b5cff;   
+  color: #fff;                   
+  padding: 6px 14px;             
+  border-radius: 6px;            
+  text-decoration: none;        
+  font-size: 15px;              
+}
+
+/* BUTTOM BACK KE ABOUT DARI PROFIL PRIBADI */
+.btn-back {
+  display: inline-block;
+  background-color: #0b5cff;        
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 15px;
+  margin-top: 20px;          
+}
+.back-container {
+  display: flex;
+  justify-content: center;   
+  margin-top: 20px;          
 }
 
 /* CTA STRIP */
