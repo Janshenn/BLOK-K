@@ -36,12 +36,12 @@
     </div>
   </header>
 
-<section class="about-untar" aria-labelledby="untar-title">
+<section class="hero">
     <div class="about-text"> 
-        <h1 id="untar-title">Kami adalah mahasiswa Universitas Tarumanagara (UNTAR) yang aktif dalam kegiatan akademik maupun organisasi. </h1>
+        <h1 id="hero-title">Kami adalah mahasiswa Universitas Tarumanagara (UNTAR) yang aktif dalam kegiatan akademik maupun organisasi. </h1>
         <p>Melalui berbagai program dan aktivitas, kami berusaha membangun portofolio, memperluas jaringan, serta mengembangkan keterampilan profesional. </p>
     </div>
-    <div class="about-img">
+    <div class="hero-illustration-untar">
         <img src="{{ asset('images/untar-logo.png') }}" alt="Logo Untar">
     </div>
 </section>

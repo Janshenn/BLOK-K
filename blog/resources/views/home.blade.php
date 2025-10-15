@@ -100,48 +100,6 @@
         </div>
       </section>
 
-      <!-- TEAM -->
-      <section id="team" class="section" aria-labelledby="team-title">
-        <h2 id="team-title" style="text-align:center;font-size:28px;margin-bottom:20px">Penulis Kami</h2>
-        <div class="team-grid">
-          <div class="member">
-            <img src="https://via.placeholder.com/240?text=Andi" alt="Andi Pratama">
-            <div class="name">M. Budiman Rocky Setiawan</div>
-            <div class="role">BackEnd Programming</div>
-            <div class="bio">Menulis tutorial pemrograman, best practices, dan tips debugging.</div>
-            <div class="skills" style="margin-top:12px;">
-              <span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">Laravel</span>
-            </div>
-          </div>
-          <div class="member">
-            <img src="https://via.placeholder.com/240?text=Janshen" alt="Janshen">
-            <div class="name">Janshen</div>
-            <div class="role">FrontEnd Programming</div>
-            <div class="bio">Fokus pada artikel lifestyle, wellness, dan storytelling.</div>
-            <div class="skills" style="margin-top:12px;">
-              <span class="skill">Penulisan</span><span class="skill">SEO</span><span class="skill">Editorial</span>
-            </div>
-          </div>
-          <div class="member">
-            <img src="https://via.placeholder.com/240?text=Citra" alt="Citra Dewi">
-            <div class="name">Dennis Ananda</div>
-            <div class="role">BackEnd Programming</div>
-            <div class="bio">Membahas UI/UX, desain produk, dan aset visual untuk web.</div>
-            <div class="skills" style="margin-top:12px;">
-              <span class="skill">UI/UX</span><span class="skill">Figma</span><span class="skill">Illustration</span>
-            </div>
-          </div>
-          <div class="member">
-            <img src="https://via.placeholder.com/240?text=Dimas" alt="Dimas Saputra">
-            <div class="name">Isro Indra Septian</div>
-            <div class="role">FrontEnd Programming</div>
-            <div class="bio">Menjelajah tempat baru dan berbagi cerita kuliner & budaya.</div>
-            <div class="skills" style="margin-top:12px;">
-              <span class="skill">Fotografi</span><span class="skill">Storytelling</span><span class="skill">Travel</span>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <!-- ABOUT -->
       <section id="about" class="section" aria-labelledby="about-title">
