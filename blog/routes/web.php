@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\ProfileController;
 
 // // Halaman home
 // Route::get('/', function () {
@@ -25,7 +26,10 @@ use App\Http\Controllers\ProfilController;
 Route::get('/', function () {
     return view('home');
 })->name('home');
-
+//profile 
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+});
 // Halaman About
 Route::get('/About', function () {
     return view('About'); 
