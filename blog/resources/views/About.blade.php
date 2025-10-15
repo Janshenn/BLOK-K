@@ -139,14 +139,17 @@
     </div>
 
 <script>
-let index = 0;
-const slides = document.querySelector(".about-photo-carousel .slides");
-const totalSlides = slides.children.length;
+  const allCarousels = document.querySelectorAll(".about-photo-carousel .slides");
 
-setInterval(() => {
-  index = (index + 1) % totalSlides;
-  slides.style.transform = `translateX(-${index * 100}%)`;
-}, 3000);
+  allCarousels.forEach((slides) => {
+    let index = 0;
+    const totalSlides = slides.children.length;
+
+    setInterval(() => {
+      index = (index + 1) % totalSlides;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }, 3000);
+  });
 </script>
 
 </body>
