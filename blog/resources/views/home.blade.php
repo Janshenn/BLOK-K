@@ -14,47 +14,47 @@
 <body>
   <header class="site-nav" role="banner">
     <div class="nav-inner" style="display:flex;align-items:center;justify-content:space-between;padding:12px 24px;">
-        
-        <!-- Brand / Logo -->
-        <div class="brand" style="display:flex;align-items:center;gap:12px;">
-            <img src="{{ asset('images/logo.png') }}" alt="Logo BLOK-K" class="logo-mark" style="width:42px;height:42px;">
-            <div class="title" style="font-weight:800;font-size:18px;">BLOK-K</div>
-        </div>
 
-        <!-- Menu Navigasi -->
-                <nav class="site-menu" role="navigation" aria-label="Main navigation" 
-             style="position:absolute; left:50%; transform:translateX(-50%); display:flex; gap:20px;">
-            <a href="{{ route('home') }}">Home</a>
-            <a href="{{ route('About') }}">About</a>
-            <a href="{{ route('Kontak') }}" class="active">Kontak</a>
-        </nav>
+      <!-- Brand / Logo -->
+      <div class="brand" style="display:flex;align-items:center;gap:12px;">
+        <img src="{{ asset('images/logo.png') }}" alt="Logo BLOK-K" class="logo-mark" style="width:42px;height:42px;">
+        <div class="title" style="font-weight:800;font-size:18px;">BLOK-K</div>
+      </div>
+
+      <!-- Menu Navigasi -->
+      <nav class="site-menu" role="navigation" aria-label="Main navigation"
+        style="position:absolute; left:50%; transform:translateX(-50%); display:flex; gap:20px;">
+        <a href="{{ route('home') }}">Home</a>
+        <a href="{{ route('About') }}">About</a>
+        <a href="{{ route('Kontak') }}" class="active">Kontak</a>
+      </nav>
 
 
-        <!-- CTA / Avatar + Logout -->
-        <div class="cta" style="margin-left:auto; display:flex;align-items:center;gap:10px;">
-            @auth
-                <!-- Avatar + Nama -->
-                <a href="{{ route('profile') }}" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;">
-                    <img src="{{ Auth::user()->profile_photo ? asset('storage/' . Auth::user()->profile_photo) : asset('images/Avatar.png') }}"
-                         alt="Avatar {{ Auth::user()->name }}"
-                         style="width:38px;height:38px;border-radius:50%;object-fit:cover;">
-                    <span style="font-weight:600;">{{ Auth::user()->name }}</span>
-                </a>
+      <!-- CTA / Avatar + Logout -->
+      <div class="cta" style="margin-left:auto; display:flex;align-items:center;gap:10px;">
+        @auth
+              <a href="{{ route('profile') }}"
+                style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;">
+                <img src="{{ Auth::user()->profile_photo
+          ? asset('storage/' . Auth::user()->profile_photo)
+          : asset('images/Avatar.png') }}" alt="Avatar"
+                  style="width:38px;height:38px;border-radius:50%;object-fit:cover;">
+                <span style="font-weight:600;">{{ Auth::user()->name }}</span>
+              </a>
 
-                <!-- Logout -->
-                <form action="{{ route('logout') }}" method="POST" style="margin:0;">
-                    @csrf
-                    <button type="submit" class="btn primary">Logout</button>
-                </form>
-            @endauth
+              <form action="{{ route('logout') }}" method="POST" style="margin:0;">
+                @csrf
+                <button type="submit" class="btn primary">Logout</button>
+              </form>
+        @endauth
 
-            @guest
-                <a href="{{ route('login') }}" class="btn ghost">Login</a>
-                <a href="{{ route('register') }}" class="btn primary">Buat Website</a>
-            @endguest
-        </div>
-    </div>
-</header>
+        @guest
+          <a href="{{ route('login') }}" class="btn ghost">Login</a>
+          <a href="{{ route('register') }}" class="btn primary">Buat Website</a>
+        @endguest
+      </div>
+
+  </header>
 
 
   <!-- HERO -->

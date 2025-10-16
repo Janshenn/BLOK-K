@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class ProfileController extends Controller
 {
@@ -30,18 +31,23 @@ class ProfileController extends Controller
             'profile_photo' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
         ]);
 
-        // Simpan foto profil baru jika ada
+        // Ambil data input
+        $data = $request->only('name', 'email', 'no_telp');
+
+        // Simpan foto jika ada
         if ($request->hasFile('profile_photo')) {
+            // Hapus foto lama jika ada
+            if ($user->profile_photo && Storage::disk('public')->exists($user->profile_photo)) {
+                Storage::disk('public')->delete($user->profile_photo);
+            }
+
+            // Simpan foto baru
             $path = $request->file('profile_photo')->store('profile_photos', 'public');
-            $user->profile_photo = $path;
+            $data['profile_photo'] = $path;
         }
 
-        $user->update([
-            'name' => $request->name,
-            'email' => $request->email,
-            'no_telp' => $request->no_telp,
-            'profile_photo' => $user->profile_photo
-        ]);
+        // Update user
+        $user->update($data);
 
         return redirect()->route('profile')->with('success', 'Profil berhasil diperbarui!');
     }
