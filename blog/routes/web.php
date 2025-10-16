@@ -6,22 +6,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\ProfileController;
 
-// // Halaman home
-// Route::get('/', function () {
-//     return view('home');
-// })->name('home');
 
-// Route::get('/register', function () {
-//     return view('auth.register');
-// })->name('register');
-
-
-// // Auth routes
-// Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
-// Route::post('/login', [AuthController::class, 'login']);
-// Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-
-// Halaman home
 // Halaman utama
 Route::get('/', function () {
     return view('home');
@@ -29,15 +14,17 @@ Route::get('/', function () {
 //profile 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+    Route::get('/profile/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
 });
 // Halaman About
 Route::get('/About', function () {
-    return view('About'); 
+    return view('About');
 })->name('About');
 
 // Halaman Kontak
 Route::get('/Kontak', function () {
-    return view('Kontak'); 
+    return view('Kontak');
 })->name('Kontak');
 
 // Register
