@@ -11,9 +11,7 @@
         margin: 60px auto;
         padding: 30px;
         border-radius: 16px;
-        background: #fff;
-        box-shadow: 0 10px 30px rgba(11, 92, 255, 0.2), 
-                    0 15px 45px rgba(6, 182, 212, 0.15);
+        background: linear-gradient(-45deg, #B6AE9F, #C5C7BC, #DEDED1, #FBF3D1);
         animation: fadeInUp 0.8s ease forwards;
     }
 
@@ -29,7 +27,6 @@
 
     .profile-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 12px 28px rgba(11,92,255,0.2);
     }
 
     .profile-avatar {
@@ -37,7 +34,6 @@
         height: 200px;
         border-radius: 50%;
         object-fit: cover;
-        box-shadow: 0 4px 12px rgba(11,92,255,0.25);
         flex-shrink: 0;
     }
 
@@ -66,8 +62,8 @@
 
     .btn-back {
         display: inline-block;
-        background-color: #0b5cff;        
-        color: #fff;
+        background: linear-gradient(-45deg, #B6AE9F, #C5C7BC, #DEDED1, #FBF3D1);    
+        color: #000000ff;
         padding: 10px 20px;
         border-radius: 8px;
         text-decoration: none;
@@ -77,7 +73,7 @@
     }
 
     .btn-back:hover {
-        background-color: #0672ff;
+        background: linear-gradient(-45deg, #B6AE9F, #C5C7BC, #DEDED1, #FBF3D1);
         transform: translateY(-2px);
     }
 
@@ -120,7 +116,7 @@
         <form action="{{ route('profile.delete') }}" method="POST" style="margin-top:10px;" onsubmit="return confirm('Yakin ingin menghapus akun?');">
             @csrf
             @method('DELETE')
-            <button type="submit" class="btn-back" style="background-color:red;">Hapus Akun</button>
+            <button type="submit" class="btn-back" style="background-color:red;">🗑 Hapus Akun</button>
         </form>
 
         <!-- Kembali ke home -->

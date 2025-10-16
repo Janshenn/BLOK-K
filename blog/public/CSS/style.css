@@ -1,9 +1,9 @@
 :root {
     --bg: #f8fafc;
     --white: #ffffff;
-    --muted: #6b7280;
-    --primary: #0b5cff;
-    --accent: #06b6d4;
+    --muted: #B6AE9F;
+    --primary: #C5C7BC;
+    --accent: #DEDED1;
     --card-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
     --radius: 14px;
     font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
@@ -31,7 +31,7 @@ header.site-nav {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: linear-gradient(135deg, #0b5cff, #06b6d4);
+  background: linear-gradient(-45deg, #B6AE9F, #C5C7BC, #DEDED1, #FBF3D1);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(15, 23, 42, 0.05);
   width: 100%;
@@ -100,7 +100,7 @@ nav.site-menu a {
 
 .btn.primary {
     background: var(--primary);
-    color: #fff;
+    color: #000000;
 }
 
 /* HERO */
@@ -108,14 +108,13 @@ nav.site-menu a {
   max-width: 1200px;
   margin: 60px auto;
   padding: 60px;
-  background-color: #ffffff;
+  background: linear-gradient(-45deg, #B6AE9F, #C5C7BC, #DEDED1, #FBF3D1);
   background-size: 200% 200%;
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  box-shadow: 0 6px 18px rgba(11, 92, 255, 0.12);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   animation: gradientMove 10s ease infinite, fadeInUp 0.8s ease forwards;
   color: #111111; /* teks jadi kontras dengan background */
@@ -192,6 +191,20 @@ nav.site-menu a {
   border-radius: 8px;
 }
 
+/* Gambar untuk UNTAR */
+.hero-illustration-untar {
+  flex: 1;
+  display: flex;
+  justify-content: center;   
+  align-items: center;         
+}
+
+.hero-illustration-untar img {
+  max-width: 300px; 
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+}
 
 /* Gambar di carousel */
 .hero-illustration img {
@@ -199,12 +212,6 @@ nav.site-menu a {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-}
-
-/* Tambahan efek hover lembut */
-.hero:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(90, 117, 255, 0.35);
 }
 
 .carousel {
@@ -341,7 +348,7 @@ nav.site-menu a {
 }
 
 .skill {
-    background: linear-gradient(90deg, #fff, #fbfdff);
+    background: linear-gradient(-45deg, #B6AE9F, #C5C7BC, #DEDED1, #FBF3D1);
     padding: 10px 14px;
     border-radius: 10px;
     box-shadow: 0 6px 18px rgba(2, 6, 23, 0.03);
@@ -368,55 +375,6 @@ nav.site-menu a {
 .about-button{
     margin-left: 650px;
     margin-bottom: 100px; 
-}
-
-/* ABOUT UNTAR */
-.about-untar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    max-width: 1000px;
-    margin: 60px auto;
-    padding: 20px;
-}
-
-.about-untar .about-text {
-    flex: 1;
-}
-
-.about-untar .about-text h1 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: #000000; /* warna khas untar */
-}
-
-.about-untar .about-text p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #333;
-}
-
-.about-untar .about-img {
-    flex: 0 0 220px;
-    text-align: right;
-}
-
-.about-untar .about-img img {
-    width: 200px;
-    height: auto;
-}
-
-/* Responsif */
-@media (max-width: 768px) {
-    .about-untar {
-        flex-direction: column;
-        text-align: center;
-    }
-    .about-untar .about-img {
-        text-align: center;
-        margin-top: 20px;
-    }
 }
 
 /* Foto carousel */
@@ -459,18 +417,41 @@ nav.site-menu a {
 
 .btn-secondary {
   display: inline-block;         
-  background-color: #0b5cff;   
-  color: #fff;                   
+  background: linear-gradient(-45deg, #B6AE9F, #C5C7BC, #DEDED1, #FBF3D1);
+  color: #000000;                   
   padding: 6px 14px;             
   border-radius: 6px;            
   text-decoration: none;        
   font-size: 15px;              
 }
 
+
+/* TEKS UNTUK ABOUT-PROFIL */
+.about-profil {
+  display: flex; 
+  align-items: center;
+  justify-content: space-between; 
+  background-color: #ffffff; 
+  border-radius: 1.5rem; 
+  padding: 3rem; 
+  max-width: 90%; 
+  margin: 2rem auto; 
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; 
+
+  /* GRADIASI GERAK DI LATAR BELAKANG PROFIL */
+  background: linear-gradient(-45deg, #B6AE9F, #C5C7BC, #DEDED1, #FBF3D1);
+  animation: gradientMove 10s ease infinite, fadeInUp 1s ease forwards;
+  background-size: 400% 400%;
+}
+
 /* BUTTOM BACK KE ABOUT DARI PROFIL PRIBADI */
 .btn-back {
   display: inline-block;
-  background-color: #0b5cff;        
+  background: linear-gradient(-45deg, #B6AE9F, #C5C7BC, #DEDED1, #FBF3D1);
   color: #fff;
   padding: 6px 14px;
   border-radius: 6px;
@@ -489,8 +470,8 @@ nav.site-menu a {
     margin-top: 36px;
     padding: 22px;
     border-radius: 12px;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
-    color: #fff;
+    background: linear-gradient(-45deg, #B6AE9F, #C5C7BC, #DEDED1, #FBF3D1);
+    color: #000000;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -499,8 +480,8 @@ nav.site-menu a {
 
 /* FOOTER */
 footer {
-    background: linear-gradient(135deg, #0b5cff, #06b6d4);
-    color: #fff;
+    background: linear-gradient(-45deg, #B6AE9F, #C5C7BC, #DEDED1, #FBF3D1);
+    color: #000000;
     padding: 60px 40px 20px;
     margin-top: 60px;
 }
@@ -531,7 +512,7 @@ footer {
 }
 
 .footer-section a {
-    color: #d1d5db;
+    color: #000000;
     font-size: 14px;
 }
 
@@ -551,7 +532,7 @@ footer {
 }
 
 .social-links a {
-    color: #d1d5db;
+    color: #000000;
 }
 
 /* RESPONSIVE */
@@ -619,7 +600,7 @@ footer {
 /* KONTAK */
 .contact-section {
   padding: 60px 20px;
-  background: linear-gradient(135deg, #f0f4f7, #e2e8f0);
+  background: linear-gradient(-45deg, #B6AE9F, #C5C7BC, #DEDED1, #FBF3D1);
   display: flex;
   justify-content: center;
 }
@@ -701,7 +682,7 @@ footer {
   padding: 16px;
   border: none;
   border-radius: 12px;
-  background: #38a169;
+  background: linear-gradient(-45deg, #B6AE9F, #C5C7BC, #DEDED1, #FBF3D1);
   color: white;
   font-size: 16px;
   font-weight: 600;
@@ -710,7 +691,7 @@ footer {
 }
 
 .btn-submit:hover {
-  background: #2f855a;
+  background: linear-gradient(-45deg, #B6AE9F, #C5C7BC, #DEDED1, #FBF3D1);
   transform: scale(1.02);
 }
 
@@ -770,7 +751,7 @@ footer {
 .profil-rocky {
     max-width: 1250px;
     margin: 40px auto;
-    background: white;
+    background: linear-gradient(-45deg, #B6AE9F, #C5C7BC, #DEDED1, #FBF3D1);
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);

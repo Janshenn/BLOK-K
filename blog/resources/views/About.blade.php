@@ -52,6 +52,7 @@
     </div>
 </header>
 
+<!-- UNTAR -->
 <section class="hero">
     <div class="about-text"> 
         <h1 id="hero-title">Kami adalah mahasiswa Universitas Tarumanagara (UNTAR) yang aktif dalam kegiatan akademik maupun organisasi. </h1>
@@ -74,7 +75,7 @@
     </div>
 
     <!-- TEKS -->
-   <div class="about-text">
+   <div class="about-profil">
     <h2>M.Budiman Rocky S</h2>
     <h4>BackEnd Programming</h4>
     <p>
@@ -97,7 +98,7 @@
     </div>
 
     <!-- TEKS -->
-   <div class="about-text">
+   <div class="about-profil">
     <h2>Janshen</h2>
     <h4>FrontEnd Programming</h4>
     <p>
@@ -120,7 +121,7 @@
     </div>
 
     <!-- TEKS -->
-   <div class="about-text">
+   <div class="about-profil">
     <h2>Dennis Ananda</h2>
     <h4>BackEnd Programming</h4>
     <p>
@@ -143,7 +144,7 @@
     </div>
 
     <!-- TEKS -->
-   <div class="about-text">
+   <div class="about-profil">
     <h2>Isro Indra Septian</h2>
     <h4>FrontEnd Programming</h4>
     <p>
@@ -151,7 +152,7 @@
       dengan fokus pada performa dan pengalaman pengguna.
     </p>
     <a href="{{ route('profil.isro') }}" class="btn-secondary">Lihat Selengkapnya</a>
-</section>     
+  </section>     
     </div>
 
 <script>
@@ -181,7 +182,7 @@
               style="width: 42px; height: 42px; border-radius: 10px;">
             <div style="font-weight: 800; font-size: 18px;">BLOK-K</div>
           </div>
-          <p style="color: #d1d5db; font-size: 14px; line-height: 1.5;">
+          <p style="color: #000000ff; font-size: 14px; line-height: 1.5;">
             Platform untuk melatih pengalaman organisasi dan membangun portofolio yang mengesankan.
           </p>
         </div>
@@ -210,7 +211,7 @@
         <!-- Contact Info -->
         <div class="footer-section">
           <h3>Kontak</h3>
-          <div style="color: #d1d5db; font-size: 14px; line-height: 1.8;">
+          <div style="color: #000000ff; font-size: 14px; line-height: 1.8;">
             <p style="margin-bottom: 8px;">Email: blok-k@gmail.com</p>
             <p style="margin-bottom: 8px;">Telepon: (021) 1234-5678</p>
             <p style="margin-bottom: 8px;">Alamat: Jl. Teknologi No. 123, Jakarta</p>
@@ -220,7 +221,7 @@
 
       <!-- Copyright & Social -->
       <div class="footer-bottom">
-        <div style="color: #9ca3af; font-size: 14px;">
+        <div style="color: #000000ff; font-size: 14px;">
           © 2023 BLOK-K. Hak Cipta Dilindungi.
         </div>
         <div class="social-links">

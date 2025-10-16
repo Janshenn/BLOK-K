@@ -12,9 +12,7 @@
             margin: 60px auto;
             padding: 30px;
             border-radius: 16px;
-            background: #fff;
-            box-shadow: 0 10px 30px rgba(11, 92, 255, 0.2), 
-                        0 15px 45px rgba(6, 182, 212, 0.15);
+            background: linear-gradient(-45deg, #B6AE9F, #C5C7BC, #DEDED1, #FBF3D1);
             animation: fadeInUp 0.8s ease forwards;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
@@ -41,7 +39,6 @@
             border-radius: 50%;
             object-fit: cover;
             margin: 0 auto 20px;
-            box-shadow: 0 4px 12px rgba(11,92,255,0.25);
         }
 
         /* ---------- Form Styles ---------- */
@@ -72,13 +69,12 @@
         input[type="text"]:focus,
         input[type="email"]:focus,
         input[type="file"]:focus {
-            border-color: #0b5cff;
-            box-shadow: 0 0 8px rgba(11, 92, 255, 0.3);
+            border-color: #000000ff;
         }
 
         /* ---------- Buttons ---------- */
         button[type="submit"] {
-            background-color: #0b5cff;
+            background-color: #000000ff;
             color: #fff;
             padding: 12px 20px;
             border-radius: 12px;
@@ -91,7 +87,7 @@
         }
 
         button[type="submit"]:hover {
-            background-color: #0672ff;
+            background-color: #000000ff;
             transform: translateY(-2px);
         }
 
@@ -100,13 +96,13 @@
             display: inline-block;
             margin-top: 15px;
             text-decoration: none;
-            color: #0b5cff;
+            color: #000000ff;
             font-weight: 600;
             transition: color 0.3s, transform 0.2s;
         }
 
         a.back-link:hover {
-            color: #0672ff;
+            color: #000000ff;
             transform: translateY(-2px);
         }
 

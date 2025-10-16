@@ -152,7 +152,7 @@
             style="width: 42px; height: 42px; border-radius: 10px;">
           <div style="font-weight: 800; font-size: 18px;">BLOK-K</div>
         </div>
-        <p style="color: #d1d5db; font-size: 14px; line-height: 1.5;">
+        <p style="color: #000000ff; font-size: 14px; line-height: 1.5;">
           Platform untuk melatih pengalaman organisasi dan membangun portofolio yang mengesankan.
         </p>
       </div>
@@ -181,7 +181,7 @@
       <!-- Contact Info -->
       <div class="footer-section">
         <h3>Kontak</h3>
-        <div style="color: #d1d5db; font-size: 14px; line-height: 1.8;">
+        <div style="color: #000000ff; font-size: 14px; line-height: 1.8;">
           <p style="margin-bottom: 8px;">Email: blok-k@gmail.com</p>
           <p style="margin-bottom: 8px;">Telepon: (021) 1234-5678</p>
           <p style="margin-bottom: 8px;">Alamat: Jl. Teknologi No. 123, Jakarta</p>
@@ -191,7 +191,7 @@
 
     <!-- Copyright & Social -->
     <div class="footer-bottom">
-      <div style="color: #9ca3af; font-size: 14px;">
+      <div style="color: #000000ff; font-size: 14px;">
         © 2023 BLOK-K. Hak Cipta Dilindungi.
       </div>
       <div class="social-links">
