@@ -84,63 +84,45 @@
   </section>
 
   <!-- POSTS -->
-  <section id="posts" class="section" aria-labelledby="posts-title">
-    <h2 id="posts-title" style="text-align:center;font-size:28px;margin-bottom:20px">Artikel Terbaru</h2>
-    <div class="posts-grid">
+ <!-- POSTS -->
+<section id="posts" class="section" aria-labelledby="posts-title">
+  <h2 id="posts-title" style="text-align:center;font-size:28px;margin-bottom:20px">
+    Artikel Terbaru
+  </h2>
+
+  {{-- Tombol Tambah Artikel (hanya muncul jika login) --}}
+  @auth
+    <div style="text-align:center; margin-bottom:20px;">
+      <a href="{{ route('articles.create') }}" 
+         class="btn primary"
+         style="padding:10px 20px; border-radius:8px; text-decoration:none; color:white; background:var(--primary); font-weight:600;">
+         + Tambah Artikel
+      </a>
+    </div>
+  @endauth
+
+  <div class="posts-grid">
+    @forelse($articles as $article)
       <article class="card">
-        <div class="thumb" style="background-image:url('https://via.placeholder.com/800x400?text=Artikel+1');"></div>
-        <div class="content">
-          <h3>5 Kebiasaan Produktif Setiap Hari</h3>
-          <p>Pelajari kebiasaan sederhana yang meningkatkan fokus dan hasil kerja harianmu.</p>
-          <div style="margin-top:auto"><a href="#" style="color:var(--primary);font-weight:700">Baca Selengkapnya
-              →</a></div>
+        <div class="thumb" 
+             style="background-image:url('{{ $article->image ? asset('storage/'.$article->image) : 'https://via.placeholder.com/800x400?text=No+Image' }}');">
         </div>
 
-      </article>
-      <article class="card">
-        <div class="thumb" style="background-image:url('https://via.placeholder.com/800x400?text=Artikel+2');"></div>
         <div class="content">
-          <h3>Panduan Lengkap SEO untuk Pemula</h3>
-          <p>Langkah praktis menaikkan visibilitas situs tanpa biaya iklan besar.</p>
-          <div style="margin-top:auto"><a href="#" style="color:var(--primary);font-weight:700">Baca Selengkapnya
-              →</a></div>
+          <h3>{{ $article->title }}</h3>
+          <p>{{ Str::limit($article->content, 100) }}</p>
+          <div style="margin-top:auto">
+            <a href="#" style="color:var(--primary);font-weight:700">Baca Selengkapnya →</a>
+          </div>
         </div>
       </article>
-      <article class="card">
-        <div class="thumb" style="background-image:url('https://via.placeholder.com/800x400?text=Artikel+3');"></div>
-        <div class="content">
-          <h3>Desain Responsif: Kunci Tampilan Lebih Baik</h3>
-          <p>Tips mendesain agar tampilan situs rapi di desktop maupun ponsel.</p>
-          <div style="margin-top:auto"><a href="#" style="color:var(--primary);font-weight:700">Baca Selengkapnya
-              →</a></div>
-        </div>
-      </article>
-    </div>
-  </section>
+    @empty
+      <p style="text-align:center; color:#6b7280;">Belum ada artikel tersedia.</p>
+    @endforelse
+  </div>
+</section>
 
 
-  <!-- ABOUT -->
-  <section id="about" class="section" aria-labelledby="about-title">
-    <div class="about">
-      <h2 id="about-title" style="text-align:center">Tentang Kami</h2>
-      <p style="text-align:center;color:var(--muted);max-width:900px;margin:12px auto 0">
-        Blog dibuat untuk membantu penulis berbagi ide dan pengalaman dalam dunia pemrograman, desain, dan teknologi.
-        Kami percaya bahwa berbagi pengetahuan adalah kunci untuk pertumbuhan bersama.
-      </p>
-    </div>
-  </section>
-
-  <!-- CTA STRIP -->
-  <section class="section">
-    <div class="cta-strip">
-      <div>
-        <h3 style="margin:0;font-size:20px">Siap Membangun Website Organisasi Anda?</h3>
-        <p style="margin:8px 0 0;opacity:0.9">Mulai gratis dan tingkatkan kapan saja</p>
-      </div>
-      <a href="#" class="btn" style="background:white;color:var(--primary)">Daftar Sekarang</a>
-    </div>
-  </section>
-  </main>
 
   <!-- FOOTER -->
   <footer role="contentinfo">

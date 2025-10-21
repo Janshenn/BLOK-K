@@ -5,12 +5,12 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\ProfileController;
-
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\HomeController;
 
 // Halaman utama
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
 //profile 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
@@ -18,7 +18,11 @@ Route::middleware('auth')->group(function () {
     Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile/delete', [ProfileController::class, 'destroy'])->name('profile.delete');
 });
-
+Route::get('/artikel', [ArticleController::class, 'index'])->name('articles.index');
+Route::middleware('auth')->group(function () {
+    Route::get('/artikel/create', [ArticleController::class, 'create'])->name('articles.create');
+    Route::post('/artikel', [ArticleController::class, 'store'])->name('articles.store');
+});
 // Halaman About
 Route::get('/About', function () {
     return view('About');
