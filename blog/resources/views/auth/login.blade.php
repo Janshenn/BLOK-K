@@ -8,7 +8,7 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+      background: linear-gradient(-45deg, #B6AE9F, #C5C7BC, #DEDED1, #FBF3D1);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -16,7 +16,7 @@
       margin: 0;
     }
     .login-box {
-      background: #fff;
+      background: #fff; 
       padding: 40px;
       border-radius: 16px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.08);
@@ -45,7 +45,7 @@
       font-size: 14px;
     }
     .login-box input:focus {
-      border-color: #2563eb;
+      border-color: #C5C7BC;
       outline: none;
       box-shadow: 0 0 0 2px #bfdbfe;
     }
@@ -61,12 +61,10 @@
       margin-top: 8px;
     }
     .btn-primary {
-      background: #2563eb;
-      color: #fff;
+      background: #C5C7BC;
+      color: #000000ff;
     }
-    .btn-primary:hover {
-      background: #1d4ed8;
-    }
+    
     .login-footer {
       margin-top: 20px;
       font-size: 14px;

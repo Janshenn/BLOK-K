@@ -452,7 +452,7 @@ nav.site-menu a {
 .btn-back {
   display: inline-block;
   background: linear-gradient(-45deg, #B6AE9F, #C5C7BC, #DEDED1, #FBF3D1);
-  color: #fff;
+  color: #000000;
   padding: 6px 14px;
   border-radius: 6px;
   text-decoration: none;
@@ -464,7 +464,12 @@ nav.site-menu a {
   justify-content: center;   
   margin-top: 20px;          
 }
-
+.btn.ghost {
+  color: black !important;
+  border: 1px solid black !important;
+  font-weight: 600;
+  opacity: 1 !important;
+}
 /* CTA STRIP */
 .cta-strip {
     margin-top: 36px;
@@ -600,7 +605,6 @@ footer {
 /* KONTAK */
 .contact-section {
   padding: 60px 20px;
-  background: linear-gradient(-45deg, #B6AE9F, #C5C7BC, #DEDED1, #FBF3D1);
   display: flex;
   justify-content: center;
 }

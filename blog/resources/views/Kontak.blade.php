@@ -45,7 +45,7 @@
 
         @guest
           <a href="{{ route('login') }}" class="btn ghost">Login</a>
-          <a href="{{ route('register') }}" class="btn primary">Buat Website</a>
+          <a href="{{ route('register') }}" class="btn ghost">Sign Up</a>
         @endguest
       </div>
 

@@ -67,9 +67,8 @@
         padding: 10px 20px;
         border-radius: 8px;
         text-decoration: none;
-        font-weight: 600;
+      
         margin-top: 20px;
-        transition: background 0.3s, transform 0.2s;
     }
 
     .btn-back:hover {
@@ -111,12 +110,12 @@
         @if($user->no_telp)
           <p><strong>No. Telepon:</strong> {{ $user->no_telp }}</p>
         @endif
-       <a href="{{ route('profile.edit') }}" class="btn-back" style="background-color:#0b5cff;">✏️ Edit Profile</a>
+       <a href="{{ route('profile.edit') }}" class="btn-back" style="background-color:#0b5cff;">✏️Edit Profile</a>
         <!-- Hapus akun -->
         <form action="{{ route('profile.delete') }}" method="POST" style="margin-top:10px;" onsubmit="return confirm('Yakin ingin menghapus akun?');">
             @csrf
             @method('DELETE')
-            <button type="submit" class="btn-back" style="background-color:red;">🗑 Hapus Akun</button>
+            <button type="submit" class="btn-back" style="border:none;">🗑 Hapus Akun</button>
         </form>
 
         <!-- Kembali ke home -->

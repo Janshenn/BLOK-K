@@ -8,7 +8,7 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+      background: linear-gradient(-45deg, #B6AE9F, #C5C7BC, #DEDED1, #FBF3D1);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -62,12 +62,10 @@
       transition: background 0.2s;
     }
     .btn-primary {
-      background: #2563eb;
-      color: #fff;
+      background: #C5C7BC;
+      color: #000000ff;
     }
-    .btn-primary:hover {
-      background: #1d4ed8;
-    }
+
     .form-footer {
       margin-top: 20px;
       font-size: 14px;

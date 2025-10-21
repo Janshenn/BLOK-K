@@ -50,7 +50,7 @@
 
         @guest
           <a href="{{ route('login') }}" class="btn ghost">Login</a>
-          <a href="{{ route('register') }}" class="btn primary">Buat Website</a>
+          <a href="{{ route('register') }}" class="btn btn ghost">Sign Up</a>
         @endguest
       </div>
 
@@ -95,7 +95,7 @@
     <div style="text-align:center; margin-bottom:20px;">
       <a href="{{ route('articles.create') }}" 
          class="btn primary"
-         style="padding:10px 20px; border-radius:8px; text-decoration:none; color:white; background:var(--primary); font-weight:600;">
+         style="padding:10px 20px; border-radius:8px; text-decoration:none; color:black; background:var(--primary); font-weight:600;">
          + Tambah Artikel
       </a>
     </div>

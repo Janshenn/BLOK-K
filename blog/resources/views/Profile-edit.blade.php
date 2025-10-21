@@ -54,17 +54,19 @@
             color: #444;
         }
 
-        input[type="text"],
-        input[type="email"],
-        input[type="file"] {
-            padding: 10px 15px;
-            border-radius: 10px;
-            border: 1px solid #ccc;
-            font-size: 16px;
-            outline: none;
-            transition: border 0.3s, box-shadow 0.3s;
-            width: 100%;
-        }
+    input[type="text"],
+    input[type="email"],
+    input[type="file"] {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+    width: 100%;
+    background-color: white; /* 🔥 tambahkan ini */
+    color: black; /* pastikan teks tetap terbaca */
+}
 
         input[type="text"]:focus,
         input[type="email"]:focus,
